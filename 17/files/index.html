@@ -1,0 +1,16 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Poll List</title>
+    </head>
+
+    <body bgcolor ="#E6E6FA">
+        {{range .}}
+        <p><b>{{.Character.Votes}}</b> {{.Character.Title}} <a href="/vote/{{.Key}}">like</a></p>
+        {{end}}
+        <p><a href="/add">Insert Character</a></p>
+    </body>
+</html>
+{{end}}  
